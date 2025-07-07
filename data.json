@@ -1,41 +1,34 @@
 {
-  "name": "Alex Shaw",
-  "title": "Full Stack Software Developer",
-  "bio": "Passionate about building scalable web applications and user experiences. Experienced in Python, JavaScript, and cloud technologies.",
-  "skills": ["Flask", "React", "PostgreSQL", "Node.js", "Express", "MongoDB"],
+  "name": "Abby Herrera-Madrid",
+  "title": "Aspiring Software Engineer",
+  "bio": "I'm a pharmacy technician with a passion for technology. I'm currently studying software development to one day build tools that improve healthcare. I enjoy building web apps, and learning new languages.",
+  "skills": ["Python", "Flask", "HTML", "CSS"],
   "projects": [
     {
-      "name": "Note Taker",
-      "description": "A web platform for collaborative note-taking.",
-      "url": "https://github.com/yourusername/project-alpha",
-      "tech_stack": ["Flask", "React", "PostgreSQL"],
-      "screenshot": "static/screenshots/project-alpha.png",
-      "demo_url": "https://project-alpha-demo.example.com"
+      "name": "Pharma Helper",
+      "description": "A Flask app designed to help track prescriptions and manage inventory in a pharmacy setting.",
+      "url": "https://github.com/abigailherrera/pharma-helper",
+      "tech_stack": ["Python", "Flask", "Bootstrap"],
+      "screenshot": "static/images/pharma-helper.png",
+      "demo_url": ""
     },
+
     {
-      "name": "Social Media Dupe",
-      "description": "A personal project mimicking popular social media sites.",
-      "url": "https://github.com/yourusername/devconnector",
-      "tech_stack": ["Node.js", "Express", "MongoDB", "React"],
-      "screenshot": "static/screenshots/devconnector.png",
-      "demo_url": "https://devconnector-demo.example.com"
-    },
-    {
-      "name": "Web Development Capstone Project",
-      "description": "Final project for web development course.",
-      "url": "https://github.com/yourusername/devconnector",
-      "tech_stack": ["Node.js", "Express", "MongoDB", "React"],
-      "screenshot": "static/screenshots/devconnector.png",
-      "demo_url": "https://devconnector-demo.example.com"
+      "name": "My Portfolio",
+      "description": "This very portfolio site you're viewing now, built with Flask and Bootstrap.",
+      "url": "https://github.com/abigailherrera/portfolio-site",
+      "tech_stack": ["HTML", "CSS", "Bootstrap", "Flask"],
+      "screenshot": "static/images/portfolio.png",
+      "demo_url": ""
     }
   ],
   "contact": {
-    "email": "alex.developer@email.com"
+    "email": "abbyannmadrid@gmail.com"
   },
   "social": [
     {
       "name": "LinkedIn",
-      "url": "https://linkedin.com/in/alexdeveloper",
+      "url": "www.linkedin.com/in/abi-herrera-madrid",
       "icon": "bi-linkedin"
     },
     {
