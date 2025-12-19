@@ -1,47 +1,108 @@
 {
   "name": "Abby Herrera-Madrid",
-  "title": "Aspiring Software Engineer",
-  "bio": "I'm a pharmacy technician with a passion for technology. I'm currently studying software development to one day build tools that improve healthcare. I enjoy building web apps, and learning new languages.",
-  "skills": ["Python", "Flask", "HTML", "CSS"],
-  "projects": [
+  "title": "Aspiring Software Engineer | Healthcare Technology Enthusiast",
+  "tagline": "Building the bridge between pharmacy and technology",
+  "bio": "I'm a certified pharmacy technician transitioning into software engineering with a mission to revolutionize healthcare technology. With hands-on experience in pharmacy operations and a growing expertise in web development, I create practical solutions that address real-world healthcare challenges. Currently expanding my technical skills while leveraging my unique healthcare background to build intuitive, user-centered applications.",
+  "skills": [
     {
-      "name": "Pharma Helper",
-      "description": "A Flask app designed to help track prescriptions and manage inventory in a pharmacy setting.",
-      "url": "https://github.com/abigailherrera/pharma-helper",
-      "tech_stack": ["Python", "Flask", "Bootstrap"],
-      "screenshot": "static/images/pharma-helper.png",
-      "demo_url": ""
+      "category": "Languages",
+      "items": ["Python", "JavaScript", "HTML5", "CSS3", "SQL"]
     },
-
     {
-      "name": "My Portfolio",
-      "description": "This very portfolio site you're viewing now, built with Flask and Bootstrap.",
-      "url": "https://github.com/abigailherrera/portfolio-site",
-      "tech_stack": ["HTML", "CSS", "Bootstrap", "Flask"],
-      "screenshot": "static/images/portfolio.png",
-      "demo_url": ""
+      "category": "Frameworks & Libraries",
+      "items": ["Flask", "Bootstrap", "Jinja2"]
+    },
+    {
+      "category": "Tools & Technologies",
+      "items": ["Git", "GitHub", "VS Code", "Chrome DevTools"]
+    },
+    {
+      "category": "Healthcare Knowledge",
+      "items": ["Pharmacy Operations", "Medication Management", "HIPAA Compliance", "Inventory Control"]
     }
   ],
+  "projects": [
+    {
+      "name": "Prep Calc",
+      "description": "A comprehensive Flask-powered web application that streamlines pharmacy compounding calculations and inventory management. Features automated dosage calculations, real-time inventory tracking, and an intuitive interface designed for fast-paced pharmacy environments. Built to reduce medication errors and improve workflow efficiency.",
+      "highlights": [
+        "Automated compound preparation calculations with unit conversion",
+        "Real-time inventory tracking and low-stock alerts",
+        "User-friendly interface optimized for pharmacy workflows",
+        "Calculation history log for quality assurance"
+      ],
+      "url": "https://github.com/abigailherrera/pharma-helper",
+      "tech_stack": ["Python", "Flask", "Bootstrap", "SQLite", "Jinja2"],
+      "screenshot": "static/images/pharma-helper.png",
+      "demo_url": "",
+      "status": "Active Development",
+      "featured": true
+    },
+    {
+      "name": "My Portfolio",
+      "description": "A dynamic, responsive portfolio website showcasing my journey from pharmacy to software engineering. Built with modern web technologies and designed with clean UI/UX principles to present projects, skills, and professional background in an engaging format.",
+      "highlights": [
+        "Fully responsive design across all devices",
+        "Dynamic content rendering with Flask templates",
+        "Smooth animations and modern UI aesthetics",
+        "Optimized performance and accessibility"
+      ],
+      "url": "https://github.com/abigailherrera/portfolio-site",
+      "tech_stack": ["HTML5", "CSS3", "Bootstrap 5", "Flask", "Python"],
+      "screenshot": "static/images/portfolio.png",
+      "demo_url": "",
+      "status": "Live",
+      "featured": false
+    }
+  ],
+  "about": {
+    "heading": "From Prescriptions to Programming",
+    "paragraphs": [
+      "My journey into tech began in the pharmacy, where I witnessed firsthand how outdated systems and inefficient workflows impact patient care. This sparked my passion for creating software solutions that make a real difference in healthcare.",
+      "As I develop my programming skills, I'm combining my pharmacy expertise with modern web technologies to build applications that address genuine pain points in the healthcare industry. My goal is to create tools that are not just functional, but intuitive and impactful."
+    ],
+    "interests": [
+      "Healthcare Technology",
+      "Web Development",
+      "UI/UX Design",
+      "Problem Solving",
+      "Continuous Learning"
+    ]
+  },
   "contact": {
-    "email": "abbyannmadrid@gmail.com"
+    "email": "abbyannmadrid@gmail.com",
+    "message": "Let's connect! Whether you want to discuss healthcare tech, collaborate on a project, or just chat about code, I'd love to hear from you."
   },
   "social": [
     {
       "name": "LinkedIn",
       "url": "https://www.linkedin.com/in/abi-herrera-madrid",
-      "icon": "bi-linkedin"
+      "icon": "bi-linkedin",
+      "color": "#0077b5"
     },
     {
       "name": "GitHub",
       "url": "https://github.com/abiannmadrid",
-      "icon": "bi-github"
+      "icon": "bi-github",
+      "color": "#333"
     }
   ],
   "color_scheme": {
     "primary": "#2d72d9",
+    "primary_dark": "#1e5bb8",
     "secondary": "#e3eafc",
     "background": "#f8fafc",
-    "text": "#222",
-    "accent": "#fff"
+    "card_background": "#ffffff",
+    "text": "#222222",
+    "text_muted": "#6c757d",
+    "accent": "#4ade80",
+    "border": "#e5e7eb",
+    "shadow": "rgba(45, 114, 217, 0.1)"
+  },
+  "design_tokens": {
+    "border_radius": "12px",
+    "card_shadow": "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
+    "hover_shadow": "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)",
+    "transition": "all 0.3s ease"
   }
 }
