@@ -16,16 +16,17 @@
         }
 
         :root {
-            --primary: #6366f1;
-            --primary-dark: #4f46e5;
-            --accent: #ec4899;
-            --accent-light: #f9a8d4;
-            --bg-dark: #0f172a;
-            --bg-darker: #020617;
-            --text-light: #f8fafc;
-            --text-muted: #94a3b8;
-            --card-bg: #1e293b;
-            --glow: rgba(99, 102, 241, 0.5);
+            --primary: #ffbbbb;
+            --primary-dark: #8b1a28;
+            --accent: #e8956d;
+            --accent-light: #f2d5c4;
+            --bg-dark: #1a0508;
+            --bg-darker: #0e0204;
+            --text-light: #f5efe6;
+            --text-muted: #d4bfab;
+            --card-bg: #2a0c10;
+            --glow: rgba(192, 57, 75, 0.45);
+            --glow-amber: rgba(232, 149, 109, 0.4);
         }
 
         body {
@@ -44,7 +45,7 @@
             width: 100%;
             height: 100%;
             z-index: -1;
-            background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #0f172a 100%);
+            background: linear-gradient(135deg, #1a0508 0%, #2d0a10 50%, #1a0508 100%);
         }
 
         .bg-gradient::before {
@@ -54,8 +55,19 @@
             left: -50%;
             width: 200%;
             height: 200%;
-            background: radial-gradient(circle, rgba(99, 102, 241, 0.1) 0%, transparent 50%);
+            background: radial-gradient(circle, rgba(192, 57, 75, 0.08) 0%, transparent 50%);
             animation: rotate 20s linear infinite;
+        }
+
+        .bg-gradient::after {
+            content: '';
+            position: absolute;
+            top: 20%;
+            right: -20%;
+            width: 60%;
+            height: 60%;
+            background: radial-gradient(circle, rgba(232, 149, 109, 0.06) 0%, transparent 60%);
+            animation: rotate 30s linear infinite reverse;
         }
 
         @keyframes rotate {
@@ -71,22 +83,16 @@
             align-items: center;
             position: sticky;
             top: 0;
-            background: rgba(15, 23, 42, 0.8);
-            backdrop-filter: blur(10px);
+            background: rgba(26, 5, 8, 0.88);
+            backdrop-filter: blur(12px);
             z-index: 100;
-            border-bottom: 1px solid rgba(99, 102, 241, 0.1);
+            border-bottom: 1px solid rgba(192, 57, 75, 0.18);
             animation: slideDown 0.6s ease-out;
         }
 
         @keyframes slideDown {
-            from { 
-                opacity: 0;
-                transform: translateY(-20px);
-            }
-            to { 
-                opacity: 1;
-                transform: translateY(0);
-            }
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
         .logo {
@@ -118,7 +124,7 @@
             left: 0;
             width: 0;
             height: 2px;
-            background: var(--accent);
+            background: linear-gradient(90deg, var(--primary), var(--accent));
             transition: width 0.3s;
         }
 
@@ -145,14 +151,8 @@
         }
 
         @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
         .hero h1 {
@@ -169,7 +169,7 @@
 
         .hero .tagline {
             font-size: clamp(1.2rem, 2.5vw, 1.8rem);
-            color: var(--accent);
+            color: var(--primary);
             font-weight: 500;
             margin-bottom: 1rem;
             animation: fadeInUp 0.8s ease-out 0.4s both;
@@ -262,7 +262,7 @@
             background: var(--card-bg);
             padding: 2rem;
             border-radius: 20px;
-            border: 1px solid rgba(99, 102, 241, 0.1);
+            border: 1px solid rgba(192, 57, 75, 0.12);
             transition: all 0.3s;
             position: relative;
             overflow: hidden;
@@ -283,7 +283,7 @@
         .skill-card:hover {
             transform: translateY(-5px);
             border-color: var(--primary);
-            box-shadow: 0 10px 40px rgba(99, 102, 241, 0.2);
+            box-shadow: 0 10px 40px rgba(192, 57, 75, 0.2);
         }
 
         .skill-card:hover::before {
@@ -293,7 +293,7 @@
         .skill-card h3 {
             font-size: 1.5rem;
             margin-bottom: 1rem;
-            color: var(--accent);
+            color: var(--primary);
         }
 
         .skill-tags {
@@ -304,8 +304,8 @@
 
         .tag {
             padding: 0.5rem 1rem;
-            background: rgba(99, 102, 241, 0.1);
-            border: 1px solid rgba(99, 102, 241, 0.3);
+            background: rgba(192, 57, 75, 0.1);
+            border: 1px solid rgba(192, 57, 75, 0.25);
             border-radius: 20px;
             font-size: 0.9rem;
             color: var(--text-light);
@@ -313,7 +313,7 @@
         }
 
         .tag:hover {
-            background: rgba(99, 102, 241, 0.2);
+            background: rgba(192, 57, 75, 0.2);
             border-color: var(--primary);
         }
 
@@ -327,7 +327,7 @@
             background: var(--card-bg);
             border-radius: 24px;
             overflow: hidden;
-            border: 1px solid rgba(99, 102, 241, 0.1);
+            border: 1px solid rgba(192, 57, 75, 0.12);
             transition: all 0.4s;
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -335,12 +335,12 @@
         }
 
         .project-card.featured {
-            border-color: var(--accent);
+            border-color: rgba(192, 57, 75, 0.5);
         }
 
         .project-card:hover {
             transform: scale(1.02);
-            box-shadow: 0 20px 60px rgba(99, 102, 241, 0.3);
+            box-shadow: 0 20px 60px rgba(192, 57, 75, 0.25);
         }
 
         .project-image {
@@ -362,7 +362,7 @@
             left: -50%;
             width: 200%;
             height: 200%;
-            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            background: radial-gradient(circle, rgba(255,255,255,0.12) 0%, transparent 70%);
             animation: pulse 4s ease-in-out infinite;
         }
 
@@ -381,11 +381,11 @@
         .project-badge {
             display: inline-block;
             padding: 0.4rem 1rem;
-            background: rgba(236, 72, 153, 0.2);
-            border: 1px solid var(--accent);
+            background: rgba(192, 57, 75, 0.15);
+            border: 1px solid var(--primary);
             border-radius: 20px;
             font-size: 0.85rem;
-            color: var(--accent);
+            color: var(--primary);
             margin-bottom: 1rem;
             width: fit-content;
         }
@@ -418,7 +418,7 @@
 
         .project-highlights li::before {
             content: '→';
-            color: var(--accent);
+            color: var(--primary);
             font-weight: bold;
         }
 
@@ -431,10 +431,10 @@
 
         .tech-tag {
             padding: 0.4rem 0.9rem;
-            background: rgba(99, 102, 241, 0.1);
+            background: rgba(232, 149, 109, 0.12);
             border-radius: 15px;
             font-size: 0.85rem;
-            color: var(--primary);
+            color: var(--accent);
         }
 
         .project-links {
@@ -454,7 +454,7 @@
         }
 
         .project-link.primary {
-            background: var(--primary);
+            background: linear-gradient(135deg, var(--primary), var(--accent));
             color: white;
         }
 
@@ -465,6 +465,7 @@
 
         .project-link:hover {
             transform: translateY(-2px);
+            box-shadow: 0 4px 15px var(--glow);
         }
 
         /* Contact Section */
@@ -473,7 +474,7 @@
             border-radius: 30px;
             padding: 4rem;
             text-align: center;
-            border: 1px solid rgba(99, 102, 241, 0.2);
+            border: 1px solid rgba(192, 57, 75, 0.2);
             margin-top: 3rem;
         }
 
@@ -481,6 +482,10 @@
             font-family: 'Playfair Display', serif;
             font-size: 3rem;
             margin-bottom: 1rem;
+            background: linear-gradient(135deg, var(--text-light), var(--accent-light));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
 
         .contact-section p {
@@ -500,22 +505,52 @@
             width: 60px;
             height: 60px;
             border-radius: 50%;
-            background: rgba(99, 102, 241, 0.1);
-            border: 2px solid var(--primary);
             display: flex;
             align-items: center;
             justify-content: center;
-            color: var(--primary);
             font-size: 1.5rem;
             transition: all 0.3s;
             text-decoration: none;
         }
 
-        .social-link:hover {
-            background: var(--primary);
-            color: white;
+        /* Individual social icon colors */
+        .social-link.linkedin {
+            background: rgba(192, 57, 75, 0.12);
+            border: 2px solid #c0394b;
+            color: #c0394b;
+        }
+
+        .social-link.linkedin:hover {
+            background: #c0394b;
+            color: #f5efe6;
             transform: translateY(-5px) rotate(5deg);
-            box-shadow: 0 10px 30px var(--glow);
+            box-shadow: 0 10px 30px rgba(192, 57, 75, 0.45);
+        }
+
+        .social-link.github {
+            background: rgba(192, 57, 75, 0.08);
+            border: 2px solid #a8404f;
+            color: #d4907a;
+        }
+
+        .social-link.github:hover {
+            background: #a8404f;
+            color: #f5efe6;
+            transform: translateY(-5px) rotate(5deg);
+            box-shadow: 0 10px 30px rgba(168, 64, 79, 0.4);
+        }
+
+        .social-link.instagram {
+            background: rgba(232, 149, 109, 0.12);
+            border: 2px solid #e8956d;
+            color: #e8956d;
+        }
+
+        .social-link.instagram:hover {
+            background: #e8956d;
+            color: #1a0508;
+            transform: translateY(-5px) rotate(5deg);
+            box-shadow: 0 10px 30px rgba(232, 149, 109, 0.4);
         }
 
         /* Footer */
@@ -523,7 +558,7 @@
             padding: 3rem 5%;
             text-align: center;
             color: var(--text-muted);
-            border-top: 1px solid rgba(99, 102, 241, 0.1);
+            border-top: 1px solid rgba(192, 57, 75, 0.12);
         }
 
         /* Responsive */
@@ -671,7 +706,7 @@
                         <li>Multiple unit conversions (mg, mcg, g, mmol, mEq)</li>
                     </ul>
                     <div class="tech-stack">
-                        <span class="tech-tag"> JavaScript</span>
+                        <span class="tech-tag">JavaScript</span>
                         <span class="tech-tag">React</span>
                         <span class="tech-tag">Vite</span>
                         <span class="tech-tag">Tailwind CSS</span>
@@ -719,15 +754,18 @@
         <div class="contact-section">
             <h2>Let's Connect</h2>
             <p>Whether you want to discuss healthcare tech, collaborate on a project, or just chat about code, I'd love to hear from you.</p>
-            <a href="mailto:abbyannmadrid@gmail.com" class="btn btn-primary" style="cursor: pointer; word-break: break-all; max-width: 100%;">
+            <a href="mailto:abbyannmadrid@gmail.com" class="btn btn-primary" style="cursor: pointer; word-break: break-all; max-width: 100%; display: inline-flex;">
                 <i class="bi bi-envelope"></i> <span style="word-break: break-word;">abbyannmadrid@gmail.com</span>
             </a>
             <div class="social-links">
-                <a href="https://www.linkedin.com/in/abi-herrera-madrid" target="_blank" class="social-link">
+                <a href="https://www.linkedin.com/in/abi-herrera-madrid" target="_blank" class="social-link linkedin" title="LinkedIn">
                     <i class="bi bi-linkedin"></i>
                 </a>
-                <a href="https://github.com/abiannmadrid" target="_blank" class="social-link">
+                <a href="https://github.com/abiannmadrid" target="_blank" class="social-link github" title="GitHub">
                     <i class="bi bi-github"></i>
+                </a>
+                <a href="https://www.instagram.com/abbyhmadrid" target="_blank" class="social-link instagram" title="Instagram">
+                    <i class="bi bi-instagram"></i>
                 </a>
             </div>
         </div>
